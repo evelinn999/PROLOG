@@ -1,0 +1,43 @@
+
+(defun aumento (tiempo)
+    (if (>= tiempo 10)
+        (format nil "Sueldo despues de aumento: ~f" (* 40000 1.1))
+        (if (>= tiempo 5)
+            (format nil "Sueldo despues de aumento: ~f" (* 40000 1.07))
+            (if (>= tiempo 3)
+                (format nil "Sueldo despues de aumento: ~f" (* 40000 1.05))
+                (format nil "Sueldo despues de aumento: ~f" (* 40000 1.03))
+            )
+        )
+    )
+)
+
+
+(defun nivel (peso)
+    (if (>= peso 30)
+        (format nil "Demasiado peso")
+        (if (>= peso 22)
+            (format nil "Nivel maximo")
+            (if (>= peso 15)
+                (format nil "Nivel alto")
+                (if (>= peso 8)
+                    (format nil "Nivel medio")
+                    (format nil "Nivel minimo")
+                )
+            )
+        )
+    )
+
+)
+
+(defun entrada (edad)
+    (if (> edad 15)
+        (format nil "Entran con regalo")
+        (if (= edad 15)
+            (format nil "Entran gratis")
+            (format nil "No pueden entrar")
+        )
+    )
+
+
+)
