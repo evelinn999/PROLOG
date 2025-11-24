@@ -2,6 +2,8 @@ padre(erick).
 madre(angela).
 hermana(yesenia).
 hermana(lizbet).
+abuela(martha).
+abuela(hilda).
 tia(vicky).
 tia(angela).
 tia(lupe).
@@ -30,8 +32,6 @@ prima(quetzaly).
 prima(vianey).
 prima(yoselin).
 prima(roxana).
-abuela(martha).
-abuela(hilda).
 padrede(mario, ulises).
 padrede(erick, yesenia).
 padrede(erick, lizbeth).
@@ -68,3 +68,10 @@ madrede(griselda, fernandoII).
 madrede(griselda, william).
 madrede(griselda, edwin).
 madrede(griselda, rodrigo).
+primos(vianey,yoselin).
+abuela(X,Y):-madrede(X,Z), madrede(Y,Z).
+hermano(X,Y):-padrede(W,X), padrede(W,Y), X\==Y.
+primo(X,Y):-padrede(W,X), padrede(Z,Y), hermano(W,Z).
+
+
+%Palabras con Mayusculas las toma como variables, no como constantes. 
