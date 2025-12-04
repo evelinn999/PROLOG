@@ -1,0 +1,1 @@
+cabeza_y_cola([C | T], C, T).
